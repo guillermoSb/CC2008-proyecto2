@@ -1,50 +1,60 @@
 package models;
 
 public class CentroReciclaje {
+    //propiedades
     private String nombre;
     private String departamento;
     private String municipio;
     private String zona;
     private String horario;
 
-    public String getDepartamento() {
-        return departamento;
+    //Métodos
+
+    //Constructor
+    CentroReciclaje(){
+
     }
 
-    public String getHorario() {
-        return horario;
+    //getters
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getDepartamento() {
+        return departamento;
     }
 
     public String getMunicipio() {
         return municipio;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
     public String getZona() {
         return zona;
     }
 
-    public void setDepartamento(String departamento) {
-        this.departamento = departamento;
+    public String getHorario() {
+        return horario;
     }
 
-    public void setHorario(String horario) {
-        this.horario = horario;
+    //setters
+    public void setNombre(String _nombre) {
+        this.nombre = _nombre;
     }
 
-    public void setMunicipio(String municipio) {
-        this.municipio = municipio;
+    public void setDepartamento(String _departamento) {
+        this.departamento = _departamento;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setMunicipio(String _municipio) {
+        this.municipio = _municipio;
     }
 
-    public void setZona(String zona) {
-        this.zona = zona;
+    public void setZona(String _zona) {
+        this.zona = _zona;
     }
 
+    public void setHorario(String _horario) {
+        this.horario = _horario;
+    }
+    
 }
