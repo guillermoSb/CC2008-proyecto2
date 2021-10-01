@@ -4,5 +4,5 @@ Este es un programa dedicado al manejo de desechos. El objetivo es reducir la ca
 - Carlos Daniel Estrada
 - Roberto Rios
 - Guillermo Santos
-### Como correr el programa
+### Como ejecutar el programa
 
