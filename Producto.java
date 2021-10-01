@@ -1,14 +1,11 @@
 package models;
 
-import java.util.ArrayList;
-
 public class Producto {
   
   //Propiedades
   private String categoria;
   private int PesoUnitario;
   private String nombre;
-  ArrayList<String> categoriaDisponible = new ArrayList();
   
   //Métodos
   //Constructor
