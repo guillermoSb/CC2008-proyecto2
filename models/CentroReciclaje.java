@@ -30,7 +30,7 @@ public class CentroReciclaje {
         return municipio;
     }
 
-    public String getZona() {
+    public int getZona() {
         return zona;
     }
 
@@ -51,7 +51,7 @@ public class CentroReciclaje {
         this.municipio = _municipio;
     }
 
-    public void setZona(String _zona) {
+    public void setZona(int _zona) {
         this.zona = _zona;
     }
 

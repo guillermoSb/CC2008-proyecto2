@@ -19,11 +19,10 @@ public class View {
                 if (controller.getUsuarioActivo() == null && (opt == 2 || opt == 1 || opt == 4)) {
                     mostrarError("Se debe crear un usuario antes de usar esas opciones.");
                 }
-                System.out.println(opt);
                 // * Evaluar las opciones del menu
                 if (opt == 1) {
-                    System.out.printf("Categorias disponibles%n0 - Papel-Carton%n1- Plastico%n2 - Vidrio%n3 - Metal");
-                    System.out.print("Seleccione una categoria");
+                    System.out.printf("Categorias disponibles%n0 - Papel-Carton%n1 - Plastico%n2 - Vidrio%n3 - Metal%n");
+                    System.out.print("Seleccione una categoria: ");
                     int cat = scan.nextInt();
                     System.out.println("Ingrese los datos del consumo:");
                 } else if (opt == 2) {
@@ -34,7 +33,7 @@ public class View {
                     System.out.printf("%-13s: %d%% %n", "Metal", 10);
                     // System.out.printf("%-10s: %d\%%n", "Papel-Carton", 50);
                 } else if (opt == 3) {
-
+                    System.out.println("Centros de reciclaje abiertos");
                 } else if (opt == 4) {
                     mostrarInfoUsuario(controller.getUsuarioActivo());
                 } else if (opt == 5) {
