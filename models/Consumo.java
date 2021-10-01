@@ -1,5 +1,7 @@
 package models;
 
+import java.util.List;
+
 public class Consumo {
 
     //Propiedades
@@ -38,5 +40,7 @@ public class Consumo {
     public void setFecha(String _fecha) {
         this.fecha = _fecha;
     }
+
+    public static String[] categoriasDisponibles = {"plastico", "papel-carton", "aluminio", "vidrio"};
     
 }

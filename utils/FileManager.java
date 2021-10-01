@@ -1,3 +1,4 @@
+package utils;
 import java.util.ArrayList;
 
 import models.CentroReciclaje;
@@ -12,14 +13,19 @@ public class FileManager {
     
     
     public static Usuario cargarUsuario() {
+        // TODO: Implement file persistance
         return null;
     }
 
     public static ArrayList<Producto> cargarProductos() {
-        return null;
+        // TODO: Implement file persistance
+        ArrayList<Producto> productos = new ArrayList<Producto>();
+        return productos;
     }
 
     public static ArrayList<CentroReciclaje> cargarCentroReciclaje() {
-        return null;
+        // TODO: Implement file persistance
+        ArrayList<CentroReciclaje> centrosReciclaje = new ArrayList<CentroReciclaje>();
+        return centrosReciclaje;
     }
 }

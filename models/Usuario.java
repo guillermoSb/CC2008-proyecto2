@@ -10,6 +10,20 @@ public class Usuario {
     private int zona;
     private int puntos;
     private ArrayList<Consumo> consumos;
+    
+    public Usuario(String nombre, String apellido, String departamento, String municipio, int zona, int puntos, ArrayList<Consumo> consumos) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.departamento = departamento;
+        this.municipio = municipio;
+        this.zona = zona;
+        this.puntos = puntos;
+        this.consumos = consumos;
+    }
+
+    public Usuario(String nombre, String apellido, String departamento, String municipio, int zona) {
+        this(nombre, apellido, departamento, municipio, zona, 0, new ArrayList<Consumo>());
+    }
 
     public String getApellido() {
         return apellido;

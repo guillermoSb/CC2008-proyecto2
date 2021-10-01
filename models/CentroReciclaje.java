@@ -5,14 +5,16 @@ public class CentroReciclaje {
     private String nombre;
     private String departamento;
     private String municipio;
-    private String zona;
+    private int zona;
     private String horario;
 
     //Métodos
 
     //Constructor
-    CentroReciclaje(){
-
+    CentroReciclaje(String nombre, String departamento, String municipio){
+        this.nombre = nombre;
+        this.departamento = departamento;
+        this.municipio = municipio;
     }
 
     //getters
