@@ -8,6 +8,11 @@ public class Producto {
   private String nombre;
   
   //Métodos
+  //Constructor
+  Producto(){
+    
+  }
+  
   //getters
   public String getCategoria() {
     return categoria;
