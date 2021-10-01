@@ -1,39 +1,42 @@
 package models;
 
-import java.util.Date;
-
 public class Consumo {
+
+    //Propiedades
     private Producto producto;
     private int cantidad;
-    private Date fecha;
+    private String fecha;
+
+    //Métodos
+    //Constructor
+    Consumo(){
+        
+    }
+
+    //getter
+    public Producto getProducto() {
+        return producto;
+    }
 
     public int getCantidad() {
         return cantidad;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public Producto getProducto() {
-        return producto;
+    //setter
+    public void setProducto(Producto _producto) {
+        this.producto = _producto;
     }
 
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+    public void setFecha(String _fecha) {
+        this.fecha = _fecha;
     }
-
-    public void setProducto(Producto producto) {
-        this.producto = producto;
-    }
-
-    public Consumo(int cantidad, Producto producto) {
-        this.cantidad = cantidad;
-        this.producto = producto;
-    }
-
+    
 }
