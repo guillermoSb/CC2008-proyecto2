@@ -12,3 +12,4 @@ public class Usuario {
     private ArrayList<Consumo> consumos;
 
 }
+
