@@ -1,5 +1,6 @@
 package models;
 
+import java.util.Date;
 import java.util.List;
 
 public class Consumo {
@@ -7,12 +8,14 @@ public class Consumo {
     //Propiedades
     private Producto producto;
     private int cantidad;
-    private String fecha;
+    private Date fecha;
 
     //Métodos
     //Constructor
-    Consumo(){
-        
+    public Consumo(Producto producto, int cantidad){
+        this.producto = producto;   // Guardar el producto
+        this.cantidad = cantidad;   // Guardar la cantidad
+        this.fecha = new Date();
     }
 
     //getter
@@ -24,7 +27,7 @@ public class Consumo {
         return cantidad;
     }
 
-    public String getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
@@ -37,10 +40,10 @@ public class Consumo {
         this.cantidad = cantidad;
     }
 
-    public void setFecha(String _fecha) {
+    public void setFecha(Date _fecha) {
         this.fecha = _fecha;
     }
 
-    public static String[] categoriasDisponibles = {"plastico", "papel-carton", "aluminio", "vidrio"};
+    public static String[] categoriasDisponibles = {"papel-carton", "plastico", "vidrio" , "metal"};
     
 }

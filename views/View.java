@@ -1,8 +1,10 @@
 package views;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import controllers.Controller;
+import models.Producto;
 import models.Usuario;
 
 public class View {
@@ -24,7 +26,31 @@ public class View {
                     System.out.printf("Categorias disponibles%n0 - Papel-Carton%n1 - Plastico%n2 - Vidrio%n3 - Metal%n");
                     System.out.print("Seleccione una categoria: ");
                     int cat = scan.nextInt();
-                    System.out.println("Ingrese los datos del consumo:");
+         
+                    // Evaluar si la categoria esta disponible
+                    if (cat < 0 || cat > 3) {
+                        throw new Exception("Esa categoria no esta disponible"); // Enviar un error
+                    }
+                    ArrayList<Producto> productos = controller.getProductosPorCategoria(cat);   // Obtener productos
+                    if (productos.size() > 0) {
+                        for (int i = 0; i < productos.size(); i++) {
+                            Producto producto = productos.get(i);
+                            System.out.printf("%d - %s - %fkg%n", i, producto.getNombre(), producto.getPesoUnitario());
+                        }
+                        System.out.print("Ingrese el producto: ");
+                        int producto = scan.nextInt();
+                        if (producto < 0 || producto > productos.size()) {
+                            throw new Exception("El producto seleccionado no existe");
+                        }
+                        System.out.println("Ingrese los datos del consumo:");   
+                        System.out.print("Cantidad de unidades: ");
+                        int cantidad = scan.nextInt();
+                        mostrarInfo("Creando consumo");
+                        controller.crearConsumo(producto, cantidad);
+                        mostrarInfo("El consumo se ha guardado");
+                    } else {
+                        mostrarInfo("No hay productos en esta categoria aun");
+                    }
                 } else if (opt == 2) {
                     System.out.println("Estadisticas del mes");
                     System.out.printf("%-13s: %d%% %n", "Papel-Carton", 50);
@@ -45,6 +71,8 @@ public class View {
             } catch (InputMismatchException e) {
                 mostrarError("El valor ingresado no es correcto.");
                 scan.nextLine();
+            } catch (Exception e) {
+                mostrarError(e.getMessage());
             }
         }
         

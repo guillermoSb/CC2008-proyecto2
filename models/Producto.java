@@ -4,13 +4,15 @@ public class Producto {
   
   //Propiedades
   private String categoria;
-  private int PesoUnitario;
+  private double pesoUnitario;
   private String nombre;
   
   //Métodos
   //Constructor
-  Producto(){
-    
+  public Producto(String categoria, double pesoUnitario, String nombre){
+    this.categoria = categoria;
+    this.pesoUnitario = pesoUnitario;
+    this.nombre = nombre;
   }
   
   //getters
@@ -18,8 +20,8 @@ public class Producto {
     return categoria;
   }
 
-  public int getPesoUnitario() {
-    return PesoUnitario;
+  public double getPesoUnitario() {
+    return pesoUnitario;
   }
 
   public String getNombre() {
@@ -32,8 +34,8 @@ public class Producto {
     this.categoria = _categoria;
   }
 
-  public void setPesoUnitario(int _pesoUnitario) {
-    PesoUnitario = _pesoUnitario;
+  public void setPesoUnitario(double _pesoUnitario) {
+    pesoUnitario = _pesoUnitario;
   }
 
   public void setNombre(String _nombre) {
