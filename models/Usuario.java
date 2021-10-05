@@ -80,4 +80,16 @@ public class Usuario {
     public void setZona(int zona) {
         this.zona = zona;
     }
+
+    @Override
+    public String toString() {
+        String infoUsuario = "";
+        infoUsuario += String.format("%-13s: %s%n", "Nombre", this.getNombre());
+        infoUsuario += String.format("%-13s: %s%n", "Apellido", this.getApellido());
+        infoUsuario += String.format("%-13s: %s%n", "Departamento", this.getDepartamento());
+        infoUsuario += String.format("%-13s: %s%n", "Municipio", this.getMunicipio());
+        infoUsuario += String.format("%-13s: %d%n", "Zona", this.getZona());
+        infoUsuario += String.format("%-13s: %d%n", "Puntos", this.getPuntos());
+        return infoUsuario;
+    }
 }

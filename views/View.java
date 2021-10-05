@@ -61,7 +61,8 @@ public class View {
                 } else if (opt == 3) {
                     System.out.println("Centros de reciclaje abiertos");
                 } else if (opt == 4) {
-                    mostrarInfoUsuario(controller.getUsuarioActivo());
+                    System.out.println("Perfil");
+                    System.out.println(controller.getUsuarioActivo());
                 } else if (opt == 5) {
                     
                 }  else if (opt == 6) {
@@ -88,17 +89,6 @@ public class View {
         System.out.println("5 - Crear un nuevo usuario");
         System.out.println("6 - Salir del programa");
     }
-
-    public static void mostrarInfoUsuario(Usuario usuario) {
-        System.out.println("Perfil");
-        System.out.printf("%-13s: %s%n", "Nombre", usuario.getNombre());
-        System.out.printf("%-13s: %s%n", "Apellido", usuario.getApellido());
-        System.out.printf("%-13s: %s%n", "Departamento", usuario.getDepartamento());
-        System.out.printf("%-13s: %s%n", "Municipio", usuario.getMunicipio());
-        System.out.printf("%-13s: %d%n", "Zona", usuario.getZona());
-        System.out.printf("%-13s: %d%n", "Puntos", usuario.getPuntos());
-    }
-
 
     public static void mostrarInfo(String info) {
         System.out.printf("[INFO] %s%n", info);
