@@ -8,10 +8,10 @@ public class Usuario {
     private String departamento;
     private String municipio;
     private int zona;
-    private int puntos;
+    private double puntos;
     private ArrayList<Consumo> consumos;
     
-    public Usuario(String nombre, String apellido, String departamento, String municipio, int zona, int puntos, ArrayList<Consumo> consumos) {
+    public Usuario(String nombre, String apellido, String departamento, String municipio, int zona, double puntos, ArrayList<Consumo> consumos) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.departamento = departamento;
@@ -45,7 +45,7 @@ public class Usuario {
         return nombre;
     }
 
-    public int getPuntos() {
+    public double getPuntos() {
         return puntos;
     }
 
@@ -73,7 +73,7 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public void setPuntos(int puntos) {
+    public void setPuntos(double puntos) {
         this.puntos = puntos;
     }
 

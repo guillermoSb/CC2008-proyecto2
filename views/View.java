@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 import controllers.Controller;
 import models.CentroReciclaje;
+import models.Consumo;
 import models.Producto;
 import models.Usuario;
 
@@ -71,14 +72,56 @@ public class View {
                         System.out.println("Municipio: " + CentroReciclaje.getMunicipio());
                         System.out.println("Horario de Atención: " + CentroReciclaje.getHorario());
                     }
+                    
+                } else if (opt == 4){
+                    System.out.println("Dejaste basura en un Centro de Reciclaje");
+                    Usuario U = contrller.getUsuarioActivo;
+                    //ArrayList<Consumo> consumos = U.getConsumos();
+                    ArrayList<Producto> productos = controller.getProductos();
 
-                } else if (opt == 4) {
+                    
+                    for (Producto Producto: productos){
+                        if (Producto.getCategoria() == "Papel-Carton"){
+                            U.setPuntos(U.getPuntos() + (Producto.getPesoUnitario() * (5)));
+                        } 
+                        
+                        if (Producto.getCategoria() == "plastico"){
+                            U.setPuntos(U.getPuntos() + (Producto.getPesoUnitario() * (10)));
+                        }
+
+                        if (Producto.getCategoria() == "vidrio"){
+                            U.setPuntos(U.getPuntos() + (Producto.getPesoUnitario() * (15)));
+                        }
+
+                        if (Producto.getCategoria() == "metal"){
+                            U.setPuntos(U.getPuntos() + (Producto.getPesoUnitario() * (20)));
+                        }
+
+                        System.out.println("has acumulado: " + U.getPuntos());
+                    }
+                    
+                    /*
+                    for (Consumo Consumo: consumos){
+                        if (Consumo.getClass() == "Papel-Carton"){
+                            U.setPuntos(U.getPuntos() + (Consumo.getCantidad() * (5)));
+                        } 
+                        
+                        if (Consumo.getClass() == "plastico"){
+                            U.setPuntos(U.getPuntos() + (Consumo.getCantidad() * (5)));
+                        }
+                    }
+                    */
+                
+                } else if (opt == 5) {
                     System.out.println("Perfil");
                     System.out.println(controller.getUsuarioActivo());
-                } else if (opt == 5) {
+                } else if (opt == 6) {
                     
-                }  else if (opt == 6) {
+                    
+                }  else if (opt == 7) {
                     mostrarInfo("Guardando Cambios. Hasta Pronto :D");
+                    
+                    
                 } 
                 
             } catch (InputMismatchException e) {
@@ -97,9 +140,10 @@ public class View {
         System.out.println("1 - Ingresar Consumo");
         System.out.println("2 - Obtener estadisticas del mes");
         System.out.println("3 - Informacion Centros de reciclaje");
-        System.out.println("4 - Ver perfil");
-        System.out.println("5 - Crear un nuevo usuario");
-        System.out.println("6 - Salir del programa");
+        Sysrem.out.println("4 - Depositar Basura en Centros");
+        System.out.println("5 - Ver perfil");
+        System.out.println("6 - Crear un nuevo usuario");
+        System.out.println("7 - Salir del programa");
     }
 
     public static void mostrarInfo(String info) {

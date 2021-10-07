@@ -40,6 +40,10 @@ public class Controller {
     public ArrayList<CentroReciclaje> getCentrosReciclaje() {
         return centrosReciclaje;
     }
+
+    public ArrayList<Producto> getProductos() {
+        return productos;
+    }
     
     public void crearConsumo(int indexProducto, int cantidad) {
         Producto producto = this.productos.get(indexProducto);
