@@ -19,7 +19,7 @@ public class Controller {
         this.productos.add( new Producto("papel-carton", 0.65, "Caja de Cereal") );
         this.productos.add( new Producto("plastico", 0.0087, "Botella de plastico") );
         this.productos.add( new Producto("vidrio", 0.245, "Botella de vidrio Coca Cola") );
-        this.centrosReciclaje = centrosReciclaje;
+        this.centrosReciclaje = FileManager.cargarCentroReciclaje();
     }
     
     /**
