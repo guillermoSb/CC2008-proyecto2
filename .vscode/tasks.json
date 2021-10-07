@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "java",
+			"targetPath": "${workspaceFolder}/${workspaceFolderBasename}.jar",
+			"elements": [
+				"${compileOutput:proyecto2_d5827bf6}",
+				"${dependencies:proyecto2_d5827bf6}"
+			],
+			"problemMatcher": [],
+			"label": "java: exportjar:proyecto2",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}

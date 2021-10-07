@@ -75,7 +75,7 @@ public class View {
                     
                 } else if (opt == 4){
                     System.out.println("Dejaste basura en un Centro de Reciclaje");
-                    Usuario U = contrller.getUsuarioActivo;
+                    Usuario U = controller.getUsuarioActivo();
                     //ArrayList<Consumo> consumos = U.getConsumos();
                     ArrayList<Producto> productos = controller.getProductos();
 
@@ -140,7 +140,7 @@ public class View {
         System.out.println("1 - Ingresar Consumo");
         System.out.println("2 - Obtener estadisticas del mes");
         System.out.println("3 - Informacion Centros de reciclaje");
-        Sysrem.out.println("4 - Depositar Basura en Centros");
+        System.out.println("4 - Depositar Basura en Centros");
         System.out.println("5 - Ver perfil");
         System.out.println("6 - Crear un nuevo usuario");
         System.out.println("7 - Salir del programa");
