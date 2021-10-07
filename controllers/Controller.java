@@ -20,6 +20,9 @@ public class Controller {
         this.productos.add( new Producto("plastico", 0.0087, "Botella de plastico") );
         this.productos.add( new Producto("vidrio", 0.245, "Botella de vidrio Coca Cola") );
         this.centrosReciclaje = FileManager.cargarCentroReciclaje();
+        this.centrosReciclaje.add( new CentroReciclaje("Las 3R", "Guatemala", "Guatemala", "De 8:00am a 5:00pm") );
+        this.centrosReciclaje.add( new CentroReciclaje("Casa Verde", "Escuintla", "La Democracia", "De 7:00am a 4:00pm") );
+        this.centrosReciclaje.add( new CentroReciclaje("Aguas cristalinas", "Izabal", "Puerto Barrios", "De 11:00am a 5:00pm") );
     }
     
     /**
@@ -33,6 +36,10 @@ public class Controller {
         productosClon.removeIf(producto -> !producto.getCategoria().equals(categoriaSeleccionada));
         return productosClon;
     }
+
+    public ArrayList<CentroReciclaje> getCentrosReciclaje() {
+        return centrosReciclaje;
+    }
     
     public void crearConsumo(int indexProducto, int cantidad) {
         Producto producto = this.productos.get(indexProducto);
@@ -43,4 +50,19 @@ public class Controller {
     public Usuario getUsuarioActivo() {
         return this.usuario;
     }
+
+    
+    /*
+    public void MostrarCentros(ArrayList<CentroReciclaje> centrosReciclaje){
+        for (CentroReciclaje CentroReciclaje: centrosReciclaje){
+            System.out.println("Nombre del Centro: " + CentroReciclaje.getNombre());
+            System.out.println("Departamento: " + CentroReciclaje.getDepartamento());
+            System.out.println("Municipio: " + CentroReciclaje.getMunicipio());
+            System.out.println("Departamento " + CentroReciclaje.getDepartamento());
+            System.out.println("Horario de Atención: " + CentroReciclaje.getHorario());
+        }
+    }
+    */
+
+
 }

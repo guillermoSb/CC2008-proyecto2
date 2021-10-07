@@ -11,10 +11,11 @@ public class CentroReciclaje {
     //Métodos
 
     //Constructor
-    CentroReciclaje(String nombre, String departamento, String municipio){
+    public CentroReciclaje(String nombre, String departamento, String municipio, String horario){
         this.nombre = nombre;
         this.departamento = departamento;
         this.municipio = municipio;
+        this.horario = horario;
     }
 
     //getters
@@ -59,4 +60,14 @@ public class CentroReciclaje {
         this.horario = _horario;
     }
     
+    @Override
+    public String toString() {
+        String infoCentros = "";
+        infoCentros += String.format("%-13s: %s%n", "Nombre", this.getNombre());
+        infoCentros += String.format("%-13s: %s%n", "Departamento", this.getDepartamento());
+        infoCentros += String.format("%-13s: %s%n", "Municipio", this.getMunicipio());
+        infoCentros += String.format("%-13s: %d%n", "Zona", this.getZona());
+        infoCentros += String.format("%-13s: %d%n", "Horario de Atención", this.getHorario());
+        return infoCentros;
+    }
 }

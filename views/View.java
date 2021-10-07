@@ -4,6 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import controllers.Controller;
+import models.CentroReciclaje;
 import models.Producto;
 import models.Usuario;
 
@@ -11,6 +12,7 @@ public class View {
     public static void main(String[] args) {
         Controller controller = new Controller();
         Scanner scan = new Scanner(System.in);
+
         int opt = 0;
         while (opt != 6) {
             mostrarMenu();
@@ -60,6 +62,16 @@ public class View {
                     // System.out.printf("%-10s: %d\%%n", "Papel-Carton", 50);
                 } else if (opt == 3) {
                     System.out.println("Centros de reciclaje abiertos");
+                    //System.out.println(controller.MostrarCentros(ArrayList<CentroReciclaje> centrosReciclaje));
+                    ArrayList<CentroReciclaje> centros = controller.getCentrosReciclaje();
+                    
+                    for (CentroReciclaje CentroReciclaje: centros){
+                        System.out.println("Nombre del Centro: " + CentroReciclaje.getNombre());
+                        System.out.println("Departamento: " + CentroReciclaje.getDepartamento());
+                        System.out.println("Municipio: " + CentroReciclaje.getMunicipio());
+                        System.out.println("Horario de Atención: " + CentroReciclaje.getHorario());
+                    }
+
                 } else if (opt == 4) {
                     System.out.println("Perfil");
                     System.out.println(controller.getUsuarioActivo());
