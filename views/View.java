@@ -67,10 +67,13 @@ public class View {
                     ArrayList<CentroReciclaje> centros = controller.getCentrosReciclaje();
                     
                     for (CentroReciclaje CentroReciclaje: centros){
+                        CentroReciclaje.toString();
+                        /*
                         System.out.println("Nombre del Centro: " + CentroReciclaje.getNombre());
                         System.out.println("Departamento: " + CentroReciclaje.getDepartamento());
                         System.out.println("Municipio: " + CentroReciclaje.getMunicipio());
                         System.out.println("Horario de Atención: " + CentroReciclaje.getHorario());
+                        */
                     }
                     
                 } else if (opt == 4){
