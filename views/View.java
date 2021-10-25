@@ -82,7 +82,6 @@ public class View {
                     //ArrayList<Consumo> consumos = U.getConsumos();
                     ArrayList<Producto> productos = controller.getProductos();
 
-                    
                     for (Consumo Consumo: consumos){
                         if (Consumo.getCategoria() == "Papel-Carton"){
                             U.setPuntos(U.getPuntos() + (Consumo.getPesoUnitario() * (5)));
@@ -124,6 +123,7 @@ public class View {
                         System.out.println("has acumulado: " + U.getPuntos());
                     }
                     */
+                    
                 
                 } else if (opt == 5) {
                     System.out.println("Perfil");
