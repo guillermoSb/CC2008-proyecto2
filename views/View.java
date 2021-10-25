@@ -83,6 +83,27 @@ public class View {
                     ArrayList<Producto> productos = controller.getProductos();
 
                     
+                    for (Consumo Consumo: consumos){
+                        if (Consumo.getCategoria() == "Papel-Carton"){
+                            U.setPuntos(U.getPuntos() + (Consumo.getPesoUnitario() * (5)));
+                        } 
+                        
+                        if (Consumo.getCategoria() == "plastico"){
+                            U.setPuntos(U.getPuntos() + (Consumo.getPesoUnitario() * (10)));
+                        }
+
+                        if (Consumo.getCategoria() == "vidrio"){
+                            U.setPuntos(U.getPuntos() + (Consumo.getPesoUnitario() * (15)));
+                        }
+
+                        if (Consumo.getCategoria() == "metal"){
+                            U.setPuntos(U.getPuntos() + (Consumo.getPesoUnitario() * (20)));
+                        }
+
+                        System.out.println("has acumulado: " + U.getPuntos());
+                    }
+
+                    /*
                     for (Producto Producto: productos){
                         if (Producto.getCategoria() == "Papel-Carton"){
                             U.setPuntos(U.getPuntos() + (Producto.getPesoUnitario() * (5)));
@@ -101,17 +122,6 @@ public class View {
                         }
 
                         System.out.println("has acumulado: " + U.getPuntos());
-                    }
-                    
-                    /*
-                    for (Consumo Consumo: consumos){
-                        if (Consumo.getClass() == "Papel-Carton"){
-                            U.setPuntos(U.getPuntos() + (Consumo.getCantidad() * (5)));
-                        } 
-                        
-                        if (Consumo.getClass() == "plastico"){
-                            U.setPuntos(U.getPuntos() + (Consumo.getCantidad() * (5)));
-                        }
                     }
                     */
                 
