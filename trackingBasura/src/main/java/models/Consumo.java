@@ -3,14 +3,15 @@ package models;
 import java.util.Date;
 import java.util.List;
 
+
 public class Consumo {
 
-    //Propiedades
+    // Propiedades
     private Producto producto;
     private int cantidad;
     private Date fecha;
 
-    //Métodos
+    // Métodos
     //Constructor
     public Consumo(Producto producto, int cantidad){
         this.producto = producto;   // Guardar el producto
@@ -18,7 +19,7 @@ public class Consumo {
         this.fecha = new Date();
     }
 
-    //getter
+    // getter
     public Producto getProducto() {
         return producto;
     }
@@ -31,7 +32,7 @@ public class Consumo {
         return fecha;
     }
 
-    //setter
+    // setter
     public void setProducto(Producto _producto) {
         this.producto = _producto;
     }

@@ -1,5 +1,6 @@
 package controllers;
 
+import interfaces.GoBack;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -13,7 +14,7 @@ import utils.DatabaseManager;
 
 import java.io.IOException;
 
-public class RegisterController {
+public class RegisterController implements GoBack {
 
     @FXML
     private Button registerSalirButton;
@@ -28,7 +29,7 @@ public class RegisterController {
      * Crea un usuario nuevo
      */
     @FXML
-    protected void registerButtonClicked() {
+    protected void registerButtonClicked() throws IOException {
         // Obtener los valores del text view
         String username = registerUserTextField.getText();
         String password = registerPasswordTextField.getText();
@@ -45,6 +46,7 @@ public class RegisterController {
             a.setTitle("Bienvenido");
             a.setContentText("");
             a.setHeaderText("Has Creado una cuenta.");
+            openDashboard();
             a.show();
         }
     }
@@ -55,6 +57,24 @@ public class RegisterController {
      */
     @FXML
     protected void registerSalirButton() throws IOException {
+        this.goBack();
+    }
+
+    /**
+     * Abre el dashboard principal
+     * @throws IOException
+     */
+    protected void openDashboard() throws IOException {
+        Stage stage = (Stage) registerSalirButton.getScene().getWindow();
+        stage.close();
+        Stage primaryStage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("/dashboard.fxml"));
+        primaryStage.setScene(new Scene(root, 900, 800));
+        primaryStage.show();
+    }
+
+    @Override
+    public void goBack() throws IOException {
         Stage stage = (Stage) registerSalirButton.getScene().getWindow();
         stage.close();
         Stage primaryStage = new Stage();

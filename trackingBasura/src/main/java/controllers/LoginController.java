@@ -29,7 +29,7 @@ public class LoginController {
     private PasswordField loginPasswordTextField;
 
     @FXML
-    protected void loginButtonClicked() {
+    protected void loginButtonClicked() throws IOException {
         System.out.println("Login");
         // Obtener los valores del text view
         String username = loginUserTextField.getText();
@@ -52,6 +52,7 @@ public class LoginController {
             a.show();
         } else {
             // Iniciar dashboard principal
+            openDashboard();
         }
     }
 
@@ -66,6 +67,19 @@ public class LoginController {
         stage.close();
         Stage primaryStage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("/register.fxml"));
+        primaryStage.setScene(new Scene(root, 900, 800));
+        primaryStage.show();
+    }
+
+    /**
+     * Abre el dashboard principal
+     * @throws IOException
+     */
+    protected void openDashboard() throws IOException {
+        Stage stage = (Stage) loginCrearCuentaButton.getScene().getWindow();
+        stage.close();
+        Stage primaryStage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("/dashboard.fxml"));
         primaryStage.setScene(new Scene(root, 900, 800));
         primaryStage.show();
     }
