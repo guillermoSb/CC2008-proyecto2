@@ -67,10 +67,13 @@ public class View {
                     ArrayList<CentroReciclaje> centros = controller.getCentrosReciclaje();
                     
                     for (CentroReciclaje CentroReciclaje: centros){
+                        CentroReciclaje.toString();
+                        /*
                         System.out.println("Nombre del Centro: " + CentroReciclaje.getNombre());
                         System.out.println("Departamento: " + CentroReciclaje.getDepartamento());
                         System.out.println("Municipio: " + CentroReciclaje.getMunicipio());
                         System.out.println("Horario de Atención: " + CentroReciclaje.getHorario());
+                        */
                     }
                     
                 } else if (opt == 4){
@@ -79,7 +82,27 @@ public class View {
                     //ArrayList<Consumo> consumos = U.getConsumos();
                     ArrayList<Producto> productos = controller.getProductos();
 
-                    
+                    for (Consumo Consumo: consumos){
+                        if (Consumo.getCategoria() == "Papel-Carton"){
+                            U.setPuntos(U.getPuntos() + (Consumo.getPesoUnitario() * (5)));
+                        } 
+                        
+                        if (Consumo.getCategoria() == "plastico"){
+                            U.setPuntos(U.getPuntos() + (Consumo.getPesoUnitario() * (10)));
+                        }
+
+                        if (Consumo.getCategoria() == "vidrio"){
+                            U.setPuntos(U.getPuntos() + (Consumo.getPesoUnitario() * (15)));
+                        }
+
+                        if (Consumo.getCategoria() == "metal"){
+                            U.setPuntos(U.getPuntos() + (Consumo.getPesoUnitario() * (20)));
+                        }
+
+                        System.out.println("has acumulado: " + U.getPuntos());
+                    }
+
+                    /*
                     for (Producto Producto: productos){
                         if (Producto.getCategoria() == "Papel-Carton"){
                             U.setPuntos(U.getPuntos() + (Producto.getPesoUnitario() * (5)));
@@ -99,18 +122,8 @@ public class View {
 
                         System.out.println("has acumulado: " + U.getPuntos());
                     }
-                    
-                    /*
-                    for (Consumo Consumo: consumos){
-                        if (Consumo.getClass() == "Papel-Carton"){
-                            U.setPuntos(U.getPuntos() + (Consumo.getCantidad() * (5)));
-                        } 
-                        
-                        if (Consumo.getClass() == "plastico"){
-                            U.setPuntos(U.getPuntos() + (Consumo.getCantidad() * (5)));
-                        }
-                    }
                     */
+                    
                 
                 } else if (opt == 5) {
                     System.out.println("Perfil");

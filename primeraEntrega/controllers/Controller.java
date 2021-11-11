@@ -1,3 +1,8 @@
+/**
+ * Clase Usuario: para la gestion de metodos y atributos de cada usuario que use la plataforma
+ * Autores: Guillermo Santos, Daniel Estrada, Roberto Rios
+ * 
+ */
 package controllers;
 import java.util.ArrayList;
 
