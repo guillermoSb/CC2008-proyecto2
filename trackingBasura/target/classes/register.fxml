@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RegisterController">
+    <children>
+        <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0" prefWidth="900.0" spacing="24.0">
+            <children>
+                <Label text="Crea tu cuenta">
+                    <font>
+                        <Font name="SF Pro Display Regular" size="39.0" />
+                    </font>
+                </Label>
+                <VBox prefHeight="47.0" prefWidth="900.0" spacing="18.0">
+                    <children>
+                        <TextField fx:id="registerUserTextField" promptText="Nombre de usuario" />
+                        <PasswordField fx:id="registerPasswordTextField" promptText="Password" />
+                    </children>
+                    <padding>
+                        <Insets left="64.0" right="64.0" />
+                    </padding>
+                </VBox>
+                <VBox alignment="CENTER" prefHeight="98.0" prefWidth="900.0" spacing="16.0">
+                    <children>
+                        <Button fx:id="registerEntrarButton" mnemonicParsing="false" onMouseClicked="#registerButtonClicked" text="Crear cuenta" />
+                        <Button fx:id="registerSalirButton" onMouseClicked="#registerSalirButton" mnemonicParsing="false" text="Regresar" />
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets top="64.0" />
+            </padding>
+        </VBox>
+    </children>
+</Pane>
