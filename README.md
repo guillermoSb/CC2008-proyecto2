@@ -5,4 +5,8 @@ Este es un programa dedicado al manejo de desechos. El objetivo es reducir la ca
 - Roberto Rios
 - Guillermo Santos
 ### Como ejecutar el programa
+Seguir las instrucciones para `IntelliJ`
+https://openjfx.io/openjfx-docs/#IDE-Intellij
+
+Revisar el paso 4
 
