@@ -8,14 +8,14 @@ public class Consumo {
 
     // Propiedades
     private Producto producto;
-    private int cantidad;
+    private double cantidad;
     private Date fecha;
 
     // Métodos
     //Constructor
-    public Consumo(Producto producto, int cantidad){
+    public Consumo(Producto producto, double cantidad){
         this.producto = producto;   // Guardar el producto
-        this.cantidad = cantidad;   // Guardar la cantidad
+        this.cantidad = cantidad * producto.getPesoUnitario();   // Guardar la cantidad
         this.fecha = new Date();
     }
 
@@ -24,7 +24,7 @@ public class Consumo {
         return producto;
     }
 
-    public int getCantidad() {
+    public double getCantidad() {
         return cantidad;
     }
 

@@ -3,16 +3,18 @@ package models;
 public class Producto {
   
   //Propiedades
+  private String _id;
   private String categoria;
   private double pesoUnitario;
   private String nombre;
   
   //Métodos
   //Constructor
-  public Producto(String categoria, double pesoUnitario, String nombre){
+  public Producto(String categoria, double pesoUnitario, String nombre, String _id){
     this.categoria = categoria;
     this.pesoUnitario = pesoUnitario;
     this.nombre = nombre;
+    this._id = _id;
   }
   
   //getters
@@ -42,4 +44,11 @@ public class Producto {
     this.nombre = _nombre;
   }
 
+  public String get_id() {
+    return _id;
+  }
+
+  public void set_id(String _id) {
+    this._id = _id;
+  }
 }

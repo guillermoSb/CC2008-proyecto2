@@ -30,7 +30,6 @@ public class LoginController {
 
     @FXML
     protected void loginButtonClicked() throws IOException {
-        System.out.println("Login");
         // Obtener los valores del text view
         String username = loginUserTextField.getText();
         String password = loginPasswordTextField.getText();
