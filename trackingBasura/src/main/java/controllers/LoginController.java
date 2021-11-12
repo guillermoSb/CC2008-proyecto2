@@ -79,6 +79,7 @@ public class LoginController {
         Stage stage = (Stage) loginCrearCuentaButton.getScene().getWindow();
         stage.close();
         Stage primaryStage = new Stage();
+
         Parent root = FXMLLoader.load(getClass().getResource("/dashboard.fxml"));
         primaryStage.setScene(new Scene(root, 900, 800));
         primaryStage.show();

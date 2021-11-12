@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="statsBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StatsController">
+   <top>
+      <Label text="Tus Estadísticas" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="SF Pro Display Regular" size="20.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets top="24.0" />
+         </BorderPane.margin>
+      </Label>
+   </top>
+</BorderPane>
