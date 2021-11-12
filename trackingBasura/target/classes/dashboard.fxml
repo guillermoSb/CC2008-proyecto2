@@ -3,6 +3,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -16,13 +18,20 @@
          <children>
             <Label text="Menu">
                <font>
-                  <Font name="SF Pro Display Regular" size="23.0" />
+                  <Font name="SF Pro Display Bold" size="23.0" />
                </font>
             </Label>
-            <Button fx:id="perfilButton" mnemonicParsing="false" text="Perfil" onMouseClicked="#perfilButtonClicked" />
+            <Button fx:id="perfilButton" mnemonicParsing="false" onMouseClicked="#perfilButtonClicked" text="Perfil" />
             <Button fx:id="estadisticasButton" mnemonicParsing="false" onMouseClicked="#estadisticasButtonClicked" text="Estadisticas" />
-            <Button fx:id="consumoButton" mnemonicParsing="false" text="Ingresar Consumo" onMouseClicked="#consumoButtonClicked" />
+            <Button fx:id="consumoButton" mnemonicParsing="false" onMouseClicked="#consumoButtonClicked" text="Ingresar Consumo" />
          </children>
       </VBox>
    </left>
+   <center>
+      <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+
+        </columns>
+      </TableView>
+   </center>
 </BorderPane>

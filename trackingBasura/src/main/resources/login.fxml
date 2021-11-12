@@ -15,7 +15,7 @@
          <children>
             <Label text="Login">
                <font>
-                  <Font name="SF Pro Display Regular" size="39.0" />
+                  <Font name="SF Pro Display Bold" size="39.0" />
                </font>
             </Label>
             <VBox prefHeight="47.0" prefWidth="900.0" spacing="18.0">

@@ -10,7 +10,7 @@
    <top>
       <Label text="Tus Estadísticas" BorderPane.alignment="CENTER">
          <font>
-            <Font name="SF Pro Display Regular" size="20.0" />
+            <Font name="SF Pro Display Bold" size="20.0" />
          </font>
          <BorderPane.margin>
             <Insets top="24.0" />

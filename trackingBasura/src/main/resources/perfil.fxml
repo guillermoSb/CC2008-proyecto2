@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<?import javafx.scene.text.Font?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
 <BorderPane fx:id="perfilBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProfileController">
     <top>
         <Label text="Tu Perfil" BorderPane.alignment="CENTER">
             <font>
-                <Font name="SF Pro Display Regular" size="20.0" />
+                <Font name="SF Pro Display Bold" size="20.0" />
             </font>
             <BorderPane.margin>
                 <Insets top="24.0" />
@@ -20,10 +18,17 @@
         </Label>
     </top>
     <left>
-        <Button fx:id="regresarButton" onMouseClicked="#regresarButtonClicked" mnemonicParsing="false" text="Regresar" BorderPane.alignment="TOP_LEFT">
+        <Button fx:id="regresarButton" mnemonicParsing="false" onMouseClicked="#regresarButtonClicked" text="Regresar" BorderPane.alignment="TOP_LEFT">
             <BorderPane.margin>
                 <Insets left="64.0" />
             </BorderPane.margin>
         </Button>
     </left>
+   <center>
+      <Label fx:id="puntosLabel" alignment="TOP_CENTER" text="Tus Puntos: 0" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="SF Pro Display Regular" size="37.0" />
+         </font>
+      </Label>
+   </center>
 </BorderPane>

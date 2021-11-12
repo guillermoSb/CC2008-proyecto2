@@ -58,7 +58,7 @@ public class ConsumoController implements GoBack, Initializable {
                 producto = this.productos.get(i);
             }
         }
-        Consumo consumo = new Consumo(producto, Integer.parseInt(cantidadField.getText()));
+        Consumo consumo = new Consumo(producto, Integer.parseInt(cantidadField.getText()), "");
         DatabaseManager.shared.crearConsumo(consumo);
         Alert a = new Alert(Alert.AlertType.INFORMATION);
         a.setTitle("Consumo");

@@ -52,7 +52,6 @@ public class StatsController implements Initializable {
                 new PieChart.Data("Organico", stats.get("Organico")),
                 new PieChart.Data("Metal", stats.get("Metal"))
         );
-        System.out.println(stats);
         // Create the Pie Chart Object
         PieChart pieChart = new PieChart(pieChartData);
         pieChart.setTitle("Tus Consumos por Categoria");

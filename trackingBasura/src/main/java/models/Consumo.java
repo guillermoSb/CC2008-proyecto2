@@ -10,14 +10,17 @@ public class Consumo {
     private Producto producto;
     private double cantidad;
     private Date fecha;
+    private String categoria;
 
     // Métodos
     //Constructor
-    public Consumo(Producto producto, double cantidad){
+    public Consumo(Producto producto, double cantidad, String categoria){
         this.producto = producto;   // Guardar el producto
         this.cantidad = cantidad * producto.getPesoUnitario();   // Guardar la cantidad
         this.fecha = new Date();
+        this.categoria = categoria;
     }
+
 
     // getter
     public Producto getProducto() {
@@ -46,5 +49,12 @@ public class Consumo {
     }
 
     public static String[] categoriasDisponibles = {"papel-carton", "plastico", "vidrio" , "metal"};
-    
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
 }
