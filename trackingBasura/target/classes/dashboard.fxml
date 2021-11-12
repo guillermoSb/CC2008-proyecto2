@@ -19,9 +19,9 @@
                   <Font name="SF Pro Display Regular" size="23.0" />
                </font>
             </Label>
-            <Button fx:id="perfilButton" mnemonicParsing="false" text="Perfil" />
+            <Button fx:id="perfilButton" mnemonicParsing="false" text="Perfil" onMouseClicked="#perfilButtonClicked" />
             <Button fx:id="estadisticasButton" mnemonicParsing="false" onMouseClicked="#estadisticasButtonClicked" text="Estadisticas" />
-            <Button fx:id="consumoButton" mnemonicParsing="false" text="Ingresar Consumo" />
+            <Button fx:id="consumoButton" mnemonicParsing="false" text="Ingresar Consumo" onMouseClicked="#consumoButtonClicked" />
          </children>
       </VBox>
    </left>

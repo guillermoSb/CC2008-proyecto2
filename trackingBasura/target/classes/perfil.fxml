@@ -6,9 +6,24 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Perfil"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<BorderPane fx:id="perfilBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ProfileController">
+    <top>
+        <Label text="Tu Perfil" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="SF Pro Display Regular" size="20.0" />
+            </font>
+            <BorderPane.margin>
+                <Insets top="24.0" />
+            </BorderPane.margin>
+        </Label>
+    </top>
+    <left>
+        <Button fx:id="regresarButton" onMouseClicked="#regresarButtonClicked" mnemonicParsing="false" text="Regresar" BorderPane.alignment="TOP_LEFT">
+            <BorderPane.margin>
+                <Insets left="64.0" />
+            </BorderPane.margin>
+        </Button>
+    </left>
+</BorderPane>
