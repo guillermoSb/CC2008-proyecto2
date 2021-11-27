@@ -1,3 +1,5 @@
+<!--Frame que muestra el perfil del usuario que accede al programa, pide el nombre, constraseña-->
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
