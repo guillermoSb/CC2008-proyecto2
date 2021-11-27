@@ -1,5 +1,6 @@
 package controllers;
 
+// importar los paquetes de javafx
 import interfaces.GoBack;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,6 +17,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * clase que controla el perfil del usuario, incorporando botones para hacer los request
+ */
 public class ProfileController implements GoBack, Initializable {
     @FXML
     Button regresarButton;
@@ -28,6 +32,9 @@ public class ProfileController implements GoBack, Initializable {
         this.goBack();
     }
 
+    /**
+     * incorporar el boton de regresar
+     */
     public void goBack() throws IOException {
         Stage stage = (Stage) regresarButton.getScene().getWindow();
         stage.close();
@@ -37,6 +44,10 @@ public class ProfileController implements GoBack, Initializable {
         primaryStage.show();
     }
 
+    /**
+    * metodo para inicar este frame
+    * como parametros se requiere el url y el paquete de propiedades
+    */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         int puntos = DatabaseManager.shared.getPuntosUsuario();
