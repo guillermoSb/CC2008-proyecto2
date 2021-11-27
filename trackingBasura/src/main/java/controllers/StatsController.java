@@ -1,5 +1,6 @@
 package controllers;
 
+// se importan las librerias de javafx
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -18,6 +19,9 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
+/**
+* esta clase se encarga de controlar la parte de las estadisticas 
+*/
 public class StatsController implements Initializable {
 
     @FXML
@@ -63,10 +67,9 @@ public class StatsController implements Initializable {
         statsBorderPane.setCenter(pieChart); // Agregar el Pie Chart al Dashboard
     }
 
-
-
-
-
+    /**
+    * override del metodo de inicio 
+    */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         drawPieChart();
