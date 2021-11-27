@@ -1,3 +1,5 @@
+<!--Frame para agregar un consumo, se despliega la informacion y opciones de ingreso de consumo-->
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
