@@ -1,7 +1,11 @@
 package models;
 
+// importar un array
 import java.util.ArrayList;
 
+/**
+* Usuario de la aplicacion, se registran, ingresan consumos y pueden canjear puntos
+*/
 public class Usuario {
     private String nombre;
     private String apellido;
@@ -11,6 +15,7 @@ public class Usuario {
     private double puntos;
     private ArrayList<Consumo> consumos;
     
+    // constructor
     public Usuario(String nombre, String apellido, String departamento, String municipio, int zona, double puntos, ArrayList<Consumo> consumos) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -21,10 +26,12 @@ public class Usuario {
         this.consumos = consumos;
     }
 
+    // overload constructor
     public Usuario(String nombre, String apellido, String departamento, String municipio, int zona) {
         this(nombre, apellido, departamento, municipio, zona, 0, new ArrayList<Consumo>());
     }
 
+    // getters
     public String getApellido() {
         return apellido;
     }
@@ -53,6 +60,7 @@ public class Usuario {
         return zona;
     }
 
+    // setters
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
