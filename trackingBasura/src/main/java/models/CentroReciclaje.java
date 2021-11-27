@@ -1,5 +1,8 @@
 package models;
 
+/**
+* clase enccargada de gestionar cambios y propiedades de cada centro de reciclaje en la base
+*/
 public class CentroReciclaje {
     //propiedades
     private String nombre;
