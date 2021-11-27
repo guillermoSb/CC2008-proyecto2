@@ -1,5 +1,6 @@
 package controllers;
 
+// importar los paquetes de javafx
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,7 +15,9 @@ import utils.DatabaseManager;
 
 import java.io.IOException;
 
-
+/**
+ * clase que controla el login del usuario e incorpora los botones para la GUI
+ */
 public class LoginController {
 
     @FXML
@@ -28,6 +31,9 @@ public class LoginController {
     @FXML
     private PasswordField loginPasswordTextField;
 
+    /**
+     * metodo que da funcionamiento al boton para entrar a la aplicacion
+     */
     @FXML
     protected void loginButtonClicked() throws IOException {
         // Obtener los valores del text view
