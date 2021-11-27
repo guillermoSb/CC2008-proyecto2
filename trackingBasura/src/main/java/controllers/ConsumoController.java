@@ -1,5 +1,6 @@
 package controllers;
 
+// se importan las librerias utilizadas para la GUI
 import interfaces.GoBack;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -23,6 +24,9 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.ResourceBundle;
 
+/**
+ * Clase que se encarga de ingresar consumos al programa
+ */
 public class ConsumoController implements GoBack, Initializable {
 
     HashMap<String, String> productosMap;
@@ -45,6 +49,9 @@ public class ConsumoController implements GoBack, Initializable {
         this.goBack();
     }
 
+    /**
+     * metodo que se encarga de registrar consumos en la base de datos con el boton asignado
+     */
     @FXML
     public void registrarConsumoButtonClicked()  {
         if (cantidadField.getText().length() <= 0) {
@@ -68,6 +75,10 @@ public class ConsumoController implements GoBack, Initializable {
 
     }
 
+    /**
+     * metodo que se encarga de darle funcionalidad al boton de regresar
+     * @throws IOException
+     */
     public void goBack() throws IOException {
         Stage stage = (Stage) regresarButton.getScene().getWindow();
         stage.close();
@@ -77,14 +88,18 @@ public class ConsumoController implements GoBack, Initializable {
         primaryStage.show();
     }
 
-
+    /**
+     * metodo que se encarga de recoger los datos de la base de datos para hacer un consumo
+     * @param url
+     * @param resourceBundle
+     */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Cargar arreglo de productos de la base de datos
         ArrayList<Producto> productos = DatabaseManager.shared.getProductos();
         this.productos = productos;
         for (int i = 0; i < productos.size(); i++) {
-//            this.productosMap.put(productos.get(i).getNombre(), productos.get(i).get_id());
+        // this.productosMap.put(productos.get(i).getNombre(), productos.get(i).get_id());
             choiceBoxField.getItems().add(productos.get(i).getNombre());
             choiceBoxField.setValue(productos.get(0).getNombre());
         }
