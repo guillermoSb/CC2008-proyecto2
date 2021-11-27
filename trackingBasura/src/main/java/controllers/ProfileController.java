@@ -27,13 +27,16 @@ public class ProfileController implements GoBack, Initializable {
     @FXML
     Label puntosLabel;
 
+    /**
+    * incorporar el boton de regresar
+    */
     @FXML
     public void regresarButtonClicked() throws IOException {
         this.goBack();
     }
 
     /**
-     * incorporar el boton de regresar
+     * funcionamiento del boton de regresar
      */
     public void goBack() throws IOException {
         Stage stage = (Stage) regresarButton.getScene().getWindow();
