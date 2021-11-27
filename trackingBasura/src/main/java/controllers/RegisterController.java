@@ -1,5 +1,6 @@
 package controllers;
 
+// importar las librerias de javafx
 import interfaces.GoBack;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,6 +15,9 @@ import utils.DatabaseManager;
 
 import java.io.IOException;
 
+/**
+* clase encargada de la interaccio y el registro del usuario
+*/
 public class RegisterController implements GoBack {
 
     @FXML
