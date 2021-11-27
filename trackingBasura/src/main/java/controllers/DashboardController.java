@@ -1,5 +1,6 @@
 package controllers;
 
+// importar los paquetes de javafx
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -22,6 +23,9 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+/**
+ * clase que se encarga de controlar el menu principal de la aplicacion
+ */
 public class DashboardController implements Initializable {
     @FXML
     BorderPane borderPane;
@@ -31,8 +35,6 @@ public class DashboardController implements Initializable {
 
     @FXML
     TableView<Consumo> table;
-
-
 
     /**
      * Navegar a las Estadisticas
@@ -73,7 +75,12 @@ public class DashboardController implements Initializable {
         primaryStage.show();
     }
 
-
+    /**
+     * override del metodo para iniciar este frame
+     * 
+     * @param location 
+     * @param resources
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         ArrayList<Consumo> consumos = DatabaseManager.shared.getConsumos();
@@ -90,8 +97,6 @@ public class DashboardController implements Initializable {
         TableColumn<Consumo, String> catCol = new TableColumn<>("Categoria");
         catCol.setMinWidth(100);
         catCol.setCellValueFactory(new PropertyValueFactory<>("categoria"));
-
-
 
         for (int i = 0; i < consumos.size(); i++) {
             consumosObs.add(consumos.get(i));
