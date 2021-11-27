@@ -1,4 +1,4 @@
-<!--Frame que muestra el perfil del usuario que accede al programa, pide el nombre, constraseña-->
+<!--Frame que muestra el perfil del usuario que accede al programa, muestra el nombre y los puntos del usuario-->
 
 <?xml version="1.0" encoding="UTF-8"?>
 
