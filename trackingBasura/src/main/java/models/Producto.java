@@ -1,5 +1,8 @@
 package models;
 
+/**
+* clase enccargada de gestionar cambios y propiedades de cada producto que ingrese el usuario como parte de sus consumos
+*/
 public class Producto {
   
   //Propiedades
