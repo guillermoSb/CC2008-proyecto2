@@ -3,7 +3,9 @@ package models;
 import java.util.Date;
 import java.util.List;
 
-
+/**
+* clase enccargada de gestionar propiedades de cada consumo ingresado por el usuario
+*/
 public class Consumo {
 
     // Propiedades
