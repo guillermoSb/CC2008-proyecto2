@@ -1,3 +1,5 @@
+
+// importar paquetes de javafx
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -6,8 +8,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+* principal class del programa
+*/
 public class Main extends Application {
 
+    // main static methods
     public static void main(String[] args) {
         launch(args);
     }
